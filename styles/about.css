@@ -1,0 +1,16 @@
+/* .sobremi{
+      animation: gogeta;
+      animation-timeline: scroll();
+      animation-fill-mode: both;
+}
+
+@keyframes gogeta {
+      from {
+    transform: translate(150px);
+  }
+  to {
+    
+    transform: translateY(0);
+  }
+
+} */
