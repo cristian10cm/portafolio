@@ -17,6 +17,6 @@ export  const links = [
         link:'#Projects'
     },{
         text: "Contacto",
-        link:'mailto:destinatario@ejemplo.com'
+        link:'mailto:cm2005cristian@gmail.com'
     }
 ]
