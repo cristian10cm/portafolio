@@ -13,5 +13,10 @@ export const courses = [
         img:'andes.png',
         text:"Curso en desarrollo web Front-End  ",
         year:'2025'
+    },
+    {
+        img:'aws-certificate.png',
+        text:"AWS Academy Graduate - Cloud Foundations",
+        year:'2026'
     }
 ]

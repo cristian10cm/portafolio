@@ -39,6 +39,15 @@ export const cardSkills = [
     img: "express.png",
     text: "Express JS",
   },
+
+  {
+    img: "nest.webp",
+    text: "Nestjs",
+  },
+  {
+    img: "prisma.png",
+    text: "Prisma ORM",
+  },
   {
     img: "postgres.jpg",
     text: "Postgres",
@@ -48,12 +57,20 @@ export const cardSkills = [
     text: "Docker",
   },
   {
-    img: "nest.webp",
-    text: "Nestjs",
+    img: "linux.png",
+    text: "Linux OS",
   },
   {
-    img: "prisma.png",
-    text: "Prisma ORM",
+    img: "aws.png",
+    text: "AWS",
+  },
+  {
+    img: "spring-logo.png",
+    text: "Spring Boot",
+  },
+  {
+    img: "java_hibernate.png",
+    text: "Java hibernate",
   },
   
 ];
