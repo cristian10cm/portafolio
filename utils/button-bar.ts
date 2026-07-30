@@ -1,5 +1,6 @@
-export  const links = [
-    {
+import { PropsLinks  } from "@/components/button-bar"
+export  const links:Record<"es"|"en",PropsLinks[]>  = { 
+    es:[{
         text: "Inicio",
         link:'#home'
     },
@@ -18,5 +19,29 @@ export  const links = [
     },{
         text: "Contacto",
         link:'mailto:cm2005cristian@gmail.com'
-    }
-]
+    }  ],
+
+    en:[
+        {
+        text: "Home",
+        link:'#home'
+    },
+    {
+        text: "About me",
+        link:'#about-me'
+    },{
+        text: "Skills",
+        link:'#skills'
+    },{
+        text: "Study",
+        link:'#study'
+    },{
+        text: "Projects",
+        link:'#Projects'
+    },{
+        text: "Contact",
+        link:'mailto:cm2005cristian@gmail.com'
+    } 
+    ] 
+}
+

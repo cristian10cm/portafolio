@@ -3,9 +3,12 @@ import React, { useState } from 'react'
 import { links } from '@/utils/button-bar'
 import ButtonBar from './button-bar'
 import { useActiveSection } from '@/utils/activeBar'
+import { useLanguage } from './LanguageProvider'
 
 const Bar = () => {
   const activeSection = useActiveSection()
+  const { language } = useLanguage();
+  const t  = links[language] ;
   const [useBoton,setBoton] = useState<boolean>(false)
   return (
     <nav className="w-full  fixed z-50 backdrop-blur-md ">
@@ -13,10 +16,10 @@ const Bar = () => {
         <img src="/logo.png" className="w-[150px]" alt="Logo Sebastián Cruz" />
 
       <div className="hidden gap-2 md:flex">
-        {links.map((p, index) => {
+        {t.map((p, index) => {
           const sectionId = p.link.replace("#", "")
           const isActive = activeSection === sectionId
-
+          
           return (
             <ButtonBar
               key={index}
@@ -40,7 +43,7 @@ const Bar = () => {
       {
         useBoton &&
         <div className='bg-gray-800/50 w-full  md:hidden p-2'>
-          {links.map((p, index) => {
+          {t.map((p, index) => {
           const sectionId = p.link.replace("#", "")
           const isActive = activeSection === sectionId
 

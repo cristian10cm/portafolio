@@ -1,7 +1,8 @@
+"use client"
 import Button from "@/components/button";
-import ButtonP from "@/utils/buttonPurple";
-import React from "react";
-type props = {
+import ButtonP from "@/components/buttonPurple";
+import { useLanguage } from "./LanguageProvider";
+export type propsProjects = {
   data: {
     title: string;
     text: string;
@@ -13,8 +14,10 @@ type props = {
     type: string;
   };
 };
-const CardProject = ({ data }: props) => {
+const CardProject = ({ data }: propsProjects) => {  
+  const { language } = useLanguage();
   return (
+
     <div
       className={`w-80 md:w-100 bg-gray-400/10 rounded-3xl h-full flex flex-col justify-items-start  overflow-hidden ${data.classN} hover:shadow-xs shadow-indigo-800/70 `}
     >
@@ -46,7 +49,8 @@ const CardProject = ({ data }: props) => {
               {" "}
               <p className="text-orange-400 text-sm">
                 {" "}
-                Respositorio Privado
+                
+                {language === "es" ? "Repositorio privado":"Private repository"}
               </p>{" "}
             </div>
           ) : (
@@ -56,7 +60,7 @@ const CardProject = ({ data }: props) => {
                   className={`bg-transparent text-white hover:bg-gray-500 border-white   border-1 text-black font-medium text-black pt-2 pb-2 pl-4 pr-4 rounded-2xl  cursor-pointer`}
                 >
                   <a target="_blank" href={data.view}>
-                    Ver sitio
+                    {language == "es" ? "Ver página":"View Page"}
                   </a>
                 </button>
               )}

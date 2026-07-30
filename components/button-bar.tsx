@@ -1,13 +1,16 @@
 import React from 'react'
-import { fontColor } from '@/utils/font-color'
+import { fontColor } from '@/components/font-color'
 
-interface Props {
+export type PropsLinks = {
+  link: string
+  text: string
+}
+export type props = {
   link: string
   text: string
   active: boolean
 }
-
-const ButtonBar = ({ link, text, active }: Props) => {
+const ButtonBar = ({ link, text, active }: props) => {
   return (
     <button
       className={`

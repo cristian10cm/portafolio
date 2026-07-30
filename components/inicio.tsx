@@ -1,24 +1,28 @@
+"use client"
 import Button from "@/components/button";
-import ButtonP from "@/utils/buttonPurple";
-import React from "react";
+import ButtonP from "@/components/buttonPurple";
+import { translationsPresentation } from "@/utils/presentation";
+import { useLanguage } from "./LanguageProvider";
 const Inicio = () => {
+  const { language } = useLanguage();
+    const t  = translationsPresentation[language] ;
   return (
     <section
       id="home"
       className="min-h-screen flex md:flex-row items-center justify-center gap-10 md:justify-evenly w-full flex-col-reverse "
     >
       <article className="flex flex-col gap-3">
-        <p className="text-purple-600 font-medium ">Hola mundo! soy</p>
+        <p className="text-purple-600 font-medium ">{t.home.greeting}</p>
         <h1 className="text-4xl md:text-5xl font-semibold text-white">
           Sebastián Cruz
         </h1>
-        <p className="text-white">Bienvenido a mi sitio web personal.</p>
-        <h1 className="typewriter">Estudiante Ing de Software</h1>
+        <p className="text-white">{t.home.welcome}</p>
+        <h1 className="typewriter">{t.home.role}</h1>
 
         <div className="flex flex-col md:flex-row gap-3">
-          <Button text="Descargar CV" bgT={"p"} />
-          <ButtonP text="Contacto" link="mailto:cm2005cristian@gmail.com" />
-          <Button text="Linkedin " bgT={"p"} link="https://www.linkedin.com/in/cristhian-cruz-790a87276/"/>
+          <Button text={t.home.downloadCV} bgT={"p"} />
+          <ButtonP text={t.home.contact} link="mailto:cm2005cristian@gmail.com" />
+          <Button text="LinkedIn " bgT={"p"} link="https://www.linkedin.com/in/cristhian-cruz-790a87276/"/>
         </div>
       </article>
       <div
@@ -26,7 +30,7 @@ const Inicio = () => {
       >
         <img
           src="/foto.png"
-          alt="Foto de Sebastián Cruz"
+          alt="Photo Sebastián Cruz"
           className="z-10 drop-shadow-2xl/30 drop-shadow-white "
         />
         <div
